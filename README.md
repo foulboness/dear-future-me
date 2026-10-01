@@ -11,7 +11,7 @@ Maybe it's a tiny time capsule filled with dreams, thoughts, goals, or things yo
 
 ---
 
-## ✦ What It Does
+## What It Does
 
 **Write a Letter**
 Write anything you'd like your future self to read.
@@ -30,7 +30,7 @@ Come back later and see what your past self wanted you to remember.
 
 ---
 
-## 🌷 The Idea
+## The Idea
 
 Sometimes we forget how much we change.
 
@@ -45,51 +45,11 @@ And the dreams we have now might actually come true.
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 * HTML
 * CSS
 * JavaScript
-
-### ✧ Concepts Used
-
-* DOM manipulation
-* Event listeners
-* Date & time calculations
-* Countdown timers
-* Form handling
-* Local browser storage
-* Responsive UI design
-
----
-
-## 🎨 Design
-
-The interface is designed to feel like a **digital stationery box / personal letter desk**.
-
-Soft typography, rounded cards, little decorative details, envelopes, paper textures, and playful interactions make the experience feel more personal than a normal form.
-
-The goal was to make writing a letter feel like an experience rather than simply typing into a text box.
-
----
-
-## 📖 How It Works
-
-```text
-WRITE
-  ↓
-CHOOSE A DATE
-  ↓
-SEAL THE LETTER
-  ↓
-WAIT
-  ↓
-RETURN TO THE FUTURE
-  ↓
-OPEN YOUR LETTER ♡
-```
-
----
 
 ## 💭 Things You Could Write About
 
