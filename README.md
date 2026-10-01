@@ -13,34 +13,20 @@ Maybe it's a tiny time capsule filled with dreams, thoughts, goals, or things yo
 
 ## ✦ What It Does
 
-💌 **Write a Letter**
+**Write a Letter**
 Write anything you'd like your future self to read.
 
-📅 **Choose a Date**
+**Choose a Date**
 Pick the date when your letter should be opened.
 
-🔐 **Seal Your Letter**
+**Seal Your Letter**
 Once you're finished, your letter becomes a little digital time capsule.
 
-⏳ **Future Countdown**
+**Future Countdown**
 See how long remains until your letter can be opened.
 
-💭 **Reflect & Remember**
+**Reflect & Remember**
 Come back later and see what your past self wanted you to remember.
-
----
-
-## 🎀 Features
-
-* Cute letter-writing interface
-* Custom future date selection
-* Digital envelope / letter design
-* Countdown to your chosen date
-* Letter preview
-* Simple and playful interactions
-* Responsive design
-* No complicated setup
-* Designed as a small digital time capsule
 
 ---
 
