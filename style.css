@@ -1,0 +1,1591 @@
+
+/* =========================================
+   DEAR, FUTURE ME
+   ========================================= */
+
+:root {
+  --background: #f6eeee;
+  --paper: #fffaf8;
+  --pink: #d97991;
+  --pink-dark: #b95b73;
+  --soft-pink: #f4dce1;
+
+  --ink: #30282a;
+  --muted: #8e7c81;
+
+  --line: #e3cfd3;
+
+  --shadow: rgba(76, 43, 51, .12);
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(255,255,255,.9),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      rgba(238,205,215,.4),
+      transparent 30%
+    ),
+    var(--background);
+
+  color: var(--ink);
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND DOODLES
+   ========================================= */
+
+.background-doodles {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  z-index: -1;
+}
+
+.doodle {
+  position: absolute;
+
+  color: rgba(217,121,145,.22);
+
+  font-family: Georgia, serif;
+}
+
+.doodle-heart {
+  top: 15%;
+  left: 4%;
+
+  font-size: 70px;
+
+  transform: rotate(-15deg);
+}
+
+.doodle-star {
+  top: 32%;
+  right: 4%;
+
+  font-size: 55px;
+}
+
+.doodle-flower {
+  bottom: 20%;
+  left: 5%;
+
+  font-size: 48px;
+}
+
+.doodle-sparkle {
+  top: 70%;
+  right: 9%;
+
+  font-size: 65px;
+}
+
+.doodle-heart-two {
+  bottom: 8%;
+  right: 35%;
+
+  font-size: 35px;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.topbar {
+  width: min(1240px, 90%);
+
+  margin: 0 auto;
+
+  height: 95px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  color: var(--ink);
+
+  text-decoration: none;
+
+  font-family: "Sacramento", cursive;
+
+  font-size: 30px;
+
+  line-height: .65;
+}
+
+.logo span {
+  color: var(--pink);
+}
+
+nav {
+  display: flex;
+
+  gap: 34px;
+}
+
+nav a {
+  color: var(--muted);
+
+  text-decoration: none;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: .1em;
+
+  text-transform: uppercase;
+
+  transition: .2s ease;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+.header-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  background: var(--pink);
+
+  border-radius: 50%;
+
+  animation: pulse 1.8s infinite;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  width: min(900px, 90%);
+
+  margin: 0 auto;
+
+  padding: 90px 0 75px;
+
+  text-align: center;
+}
+
+.hero-note {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  background: var(--soft-pink);
+
+  color: var(--pink-dark);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .08em;
+
+  transform: rotate(-2deg);
+}
+
+.hero h1 {
+  margin-top: 30px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 7vw, 86px);
+
+  font-weight: 500;
+
+  line-height: .95;
+
+  letter-spacing: -.055em;
+}
+
+.hero h1 em {
+  color: var(--pink);
+
+  font-weight: 500;
+}
+
+.hero p {
+  margin-top: 28px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.hero-decoration {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 35px;
+
+  color: var(--pink);
+}
+
+.hero-decoration div {
+  width: 45px;
+
+  height: 1px;
+
+  background: var(--line);
+}
+
+
+/* =========================================
+   APP
+   ========================================= */
+
+.app {
+  width: min(1240px, 90%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    340px;
+
+  gap: 70px;
+
+  padding-bottom: 110px;
+}
+
+.section-label,
+.card-label {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+.section-label span,
+.card-label span {
+  color: var(--pink);
+}
+
+
+/* =========================================
+   LETTER PAPER
+   ========================================= */
+
+.letter-paper {
+  position: relative;
+
+  min-height: 670px;
+
+  padding: 48px 55px 35px;
+
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 37px,
+      rgba(217,121,145,.11) 38px
+    ),
+    var(--paper);
+
+  border: 1px solid #eadadd;
+
+  box-shadow:
+    0 25px 70px var(--shadow);
+
+  transform: rotate(-.5deg);
+
+  transition: .3s ease;
+}
+
+.letter-paper:hover {
+  transform: rotate(0deg) translateY(-3px);
+}
+
+.paper-tape {
+  position: absolute;
+
+  width: 100px;
+  height: 26px;
+
+  background: rgba(241,205,179,.7);
+
+  top: -11px;
+}
+
+.tape-left {
+  left: 15%;
+
+  transform: rotate(-5deg);
+}
+
+.tape-right {
+  right: 15%;
+
+  transform: rotate(5deg);
+}
+
+.paper-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px dashed var(--line);
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .08em;
+}
+
+.letter-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 38px 0 22px;
+}
+
+.tiny-heart {
+  color: var(--pink);
+
+  font-size: 25px;
+}
+
+.letter-heading input {
+  width: 100%;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--ink);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  font-style: italic;
+}
+
+.letter-heading input::placeholder {
+  color: #bba9ae;
+}
+
+textarea {
+  width: 100%;
+
+  height: 390px;
+
+  resize: none;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--ink);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 18px;
+
+  line-height: 38px;
+}
+
+textarea::placeholder {
+  color: #bcaeb1;
+}
+
+.signature {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 12px;
+
+  color: var(--muted);
+
+  font-family: "Sacramento", cursive;
+
+  font-size: 24px;
+}
+
+.signature input {
+  width: 130px;
+
+  border: 0;
+
+  border-bottom: 1px solid var(--line);
+
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--pink-dark);
+
+  font-family: "Sacramento", cursive;
+
+  font-size: 25px;
+}
+
+.signature input::placeholder {
+  color: #c9afb6;
+}
+
+.paper-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 30px;
+
+  color: #b29da2;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+}
+
+
+/* =========================================
+   PROMPT CARD
+   ========================================= */
+
+.prompt-card {
+  display: flex;
+
+  gap: 18px;
+
+  align-items: center;
+
+  margin-top: 30px;
+
+  padding: 22px 25px;
+
+  border: 1px solid var(--line);
+
+  background: rgba(255,250,248,.6);
+
+  box-shadow: 0 12px 35px rgba(80,45,55,.05);
+}
+
+.prompt-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--soft-pink);
+
+  border-radius: 50%;
+
+  color: var(--pink-dark);
+
+  font-size: 20px;
+}
+
+.prompt-content > span {
+  color: var(--pink-dark);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .1em;
+}
+
+.prompt-content p {
+  margin: 6px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 15px;
+
+  font-style: italic;
+}
+
+.prompt-content button {
+  border: 0;
+
+  background: none;
+
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  text-decoration: underline;
+
+  text-underline-offset: 3px;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.side-card {
+  padding: 27px;
+
+  background: rgba(255,250,248,.7);
+
+  border: 1px solid var(--line);
+
+  box-shadow: 0 10px 35px rgba(80,45,55,.04);
+}
+
+.date-card h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 29px;
+
+  line-height: 1.05;
+
+  font-weight: 500;
+}
+
+.date-card h2 em {
+  color: var(--pink);
+
+  font-style: italic;
+}
+
+.date-card > p {
+  margin-top: 13px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.date-input-wrap {
+  margin-top: 22px;
+}
+
+.date-input-wrap label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .1em;
+}
+
+.date-input-wrap input {
+  width: 100%;
+
+  height: 43px;
+
+  padding: 0 10px;
+
+  border: 1px solid var(--line);
+
+  outline: 0;
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+}
+
+.quick-dates {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 5px;
+
+  margin-top: 9px;
+}
+
+.quick-dates button {
+  padding: 8px 4px;
+
+  border: 1px solid var(--line);
+
+  background: transparent;
+
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+}
+
+.quick-dates button:hover {
+  background: var(--soft-pink);
+
+  color: var(--pink-dark);
+}
+
+
+/* =========================================
+   PAPER OPTIONS
+   ========================================= */
+
+.paper-options {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 7px;
+}
+
+.paper-option {
+  border: 1px solid transparent;
+
+  padding: 4px;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.paper-option.active {
+  border-color: var(--pink);
+}
+
+.paper-preview {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1;
+
+  margin-bottom: 5px;
+
+  border: 1px solid var(--line);
+}
+
+.pink-preview {
+  background: #fff1f3;
+}
+
+.cream-preview {
+  background: #f4ecdc;
+}
+
+.night-preview {
+  background: #2d2730;
+}
+
+.lavender-preview {
+  background: #eee9f7;
+}
+
+.paper-option small {
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   SEAL CARD
+   ========================================= */
+
+.seal-card {
+  position: relative;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  background: var(--pink);
+
+  color: white;
+
+  box-shadow: 10px 10px 0 rgba(115,56,70,.1);
+}
+
+.seal-decoration {
+  position: absolute;
+
+  top: -18px;
+  right: 15px;
+
+  color: rgba(255,255,255,.25);
+
+  font-size: 85px;
+}
+
+.seal-card > span {
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .12em;
+}
+
+.seal-card h3 {
+  margin-top: 12px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 34px;
+
+  line-height: .95;
+
+  font-weight: 500;
+}
+
+.seal-card p {
+  margin: 15px 0 22px;
+
+  max-width: 240px;
+
+  color: rgba(255,255,255,.8);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.seal-card button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid rgba(255,255,255,.5);
+
+  background: white;
+
+  color: var(--pink-dark);
+
+  cursor: pointer;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: .08em;
+
+  transition: .2s ease;
+}
+
+.seal-card button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 20px rgba(80,30,45,.15);
+}
+
+
+/* =========================================
+   COUNTDOWN
+   ========================================= */
+
+.countdown-card {
+  padding: 28px;
+
+  background: #2d2529;
+
+  color: white;
+
+  text-align: center;
+
+  box-shadow: 10px 10px 0 rgba(80,45,55,.08);
+}
+
+.countdown-label {
+  color: #cbb7bd;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .1em;
+}
+
+.envelope-icon {
+  margin: 17px 0 10px;
+
+  font-size: 35px;
+}
+
+.countdown-card h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.countdown {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 4px;
+
+  margin: 25px 0;
+}
+
+.countdown div {
+  padding: 10px 2px;
+
+  background: rgba(255,255,255,.06);
+}
+
+.countdown strong {
+  display: block;
+
+  color: #f0b6c3;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 17px;
+}
+
+.countdown span {
+  color: #a9959a;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 5px;
+}
+
+.countdown-card p {
+  color: #a9959a;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   ARCHIVE
+   ========================================= */
+
+.archive {
+  width: min(1240px, 90%);
+
+  margin: 0 auto;
+
+  padding: 75px 0 120px;
+
+  border-top: 1px solid var(--line);
+}
+
+.archive-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.archive-header h2 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 55px;
+
+  font-weight: 500;
+
+  line-height: .9;
+}
+
+.archive-header h2 em {
+  color: var(--pink);
+
+  font-style: italic;
+}
+
+.archive-count {
+  text-align: right;
+}
+
+.archive-count strong {
+  display: block;
+
+  color: var(--pink);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 35px;
+
+  font-weight: 500;
+}
+
+.archive-count span {
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+}
+
+.letter-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+
+  padding: 60px;
+
+  border: 1px dashed var(--line);
+
+  text-align: center;
+
+  color: var(--muted);
+}
+
+.empty-state > div {
+  color: var(--pink);
+
+  font-size: 30px;
+}
+
+.empty-state h3 {
+  margin: 10px 0 5px;
+
+  font-family: "Playfair Display", serif;
+
+  color: var(--ink);
+
+  font-size: 20px;
+}
+
+.empty-state p {
+  font-size: 11px;
+}
+
+
+/* LETTER CARD */
+
+.saved-letter {
+  position: relative;
+
+  padding: 25px;
+
+  min-height: 190px;
+
+  border: 1px solid var(--line);
+
+  background: var(--paper);
+
+  cursor: pointer;
+
+  transition: .25s ease;
+}
+
+.saved-letter:hover {
+  transform: translateY(-5px) rotate(-.5deg);
+
+  box-shadow: 0 15px 35px var(--shadow);
+}
+
+.saved-letter::before {
+  content: "♡";
+
+  position: absolute;
+
+  top: 15px;
+  right: 18px;
+
+  color: var(--soft-pink);
+
+  font-size: 25px;
+}
+
+.saved-letter-label {
+  color: var(--pink);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .1em;
+}
+
+.saved-letter h3 {
+  margin-top: 25px;
+
+  max-width: 80%;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.saved-letter-date {
+  margin-top: 20px;
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  line-height: 1.7;
+}
+
+.saved-letter-status {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  padding: 5px 8px;
+
+  background: var(--soft-pink);
+
+  color: var(--pink-dark);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+
+  letter-spacing: .08em;
+}
+
+
+/* =========================================
+   MODAL
+   ========================================= */
+
+.modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 20px;
+}
+
+.modal-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(48,40,42,.55);
+
+  backdrop-filter: blur(5px);
+}
+
+.open-letter {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(650px, 95%);
+
+  max-height: 85vh;
+
+  overflow-y: auto;
+
+  padding: 55px;
+
+  background: var(--paper);
+
+  box-shadow: 0 30px 90px rgba(0,0,0,.2);
+
+  animation: modalIn .3s ease;
+}
+
+.close-modal {
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  border: 0;
+
+  background: none;
+
+  color: var(--muted);
+
+  cursor: pointer;
+
+  font-size: 28px;
+}
+
+.locked-letter {
+  text-align: center;
+
+  padding: 40px 10px;
+}
+
+.big-envelope {
+  margin-bottom: 20px;
+
+  font-size: 65px;
+}
+
+.locked-letter > span,
+.opened-label {
+  color: var(--pink);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .1em;
+}
+
+.locked-letter h2 {
+  margin: 15px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 35px;
+
+  font-weight: 500;
+}
+
+.locked-letter p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.opened-letter {
+  padding: 20px 10px;
+}
+
+.opened-letter h2 {
+  margin: 20px 0 30px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+}
+
+.opened-text {
+  white-space: pre-wrap;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 17px;
+
+  line-height: 2;
+
+  color: var(--ink);
+}
+
+.opened-signature {
+  margin-top: 35px;
+
+  text-align: right;
+
+  font-family: "Sacramento", cursive;
+
+  font-size: 25px;
+
+  color: var(--pink-dark);
+}
+
+.opened-signature strong {
+  margin-left: 8px;
+
+  font-weight: 400;
+}
+
+.opened-date {
+  margin-top: 30px;
+
+  padding-top: 15px;
+
+  border-top: 1px dashed var(--line);
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  width: min(1240px, 90%);
+
+  margin: 0 auto;
+
+  padding: 30px 0 40px;
+
+  border-top: 1px solid var(--line);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: var(--muted);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+.footer-logo {
+  color: var(--pink);
+
+  font-family: "Sacramento", cursive;
+
+  font-size: 22px;
+
+  text-transform: none;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================================
+   UTILITIES
+   ========================================= */
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .35;
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      rotate(-1deg);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      rotate(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 950px) {
+
+  .app {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .sidebar {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .seal-card,
+  .countdown-card {
+    grid-column: 1 / -1;
+  }
+
+  .letter-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  nav {
+    display: none;
+  }
+
+  .header-status {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .letter-paper {
+    padding: 40px 25px 30px;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  .letter-list {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-header {
+    align-items: flex-start;
+  }
+
+  .archive-header h2 {
+    font-size: 42px;
+  }
+
+  footer {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .topbar,
+  .hero,
+  .app,
+  .archive,
+  footer {
+    width: 92%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .paper-top {
+    font-size: 6px;
+  }
+
+  .letter-paper {
+    min-height: 600px;
+  }
+
+  textarea {
+    height: 330px;
+
+    line-height: 32px;
+  }
+
+  .quick-dates {
+    grid-template-columns: 1fr;
+  }
+
+  .open-letter {
+    padding: 40px 25px;
+  }
+}
+
+/* =========================================
+   PAPER THEME VARIATIONS
+   ========================================= */
+
+body.paper-cream {
+  --paper: #fffaf0;
+  --soft-pink: #eee1c8;
+  --line: #ddd0b8;
+}
+
+body.paper-night {
+  --paper: #302a31;
+  --ink: #f8edf0;
+  --muted: #b8a8ad;
+  --line: #564a50;
+  --soft-pink: #493941;
+}
+
+body.paper-night .letter-paper {
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 37px,
+      rgba(255,255,255,.07) 38px
+    ),
+    var(--paper);
+}
+
+body.paper-night textarea,
+body.paper-night .letter-heading input,
+body.paper-night .signature input {
+  color: #f8edf0;
+}
+
+body.paper-night .paper-top {
+  color: #b8a8ad;
+}
+
+body.paper-lavender {
+  --paper: #faf8ff;
+  --soft-pink: #e9e0f5;
+  --pink: #8f78b8;
+  --pink-dark: #70599b;
+  --line: #d9d0e6;
+}
+
+body.paper-lavender .letter-paper {
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 37px,
+      rgba(143,120,184,.10) 38px
+    ),
+    var(--paper);
+}

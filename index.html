@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dear, Future Me ♡</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Sacramento&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- decorative background -->
+  <div class="background-doodles">
+    <span class="doodle doodle-heart">♡</span>
+    <span class="doodle doodle-star">✦</span>
+    <span class="doodle doodle-flower">✿</span>
+    <span class="doodle doodle-sparkle">✧</span>
+    <span class="doodle doodle-heart-two">♡</span>
+  </div>
+
+
+  <!-- HEADER -->
+  <header class="topbar">
+
+    <a href="#" class="logo">
+      dear,<br>
+      <span>future me</span>
+    </a>
+
+    <nav>
+      <a href="#write">write</a>
+      <a href="#letters">my letters</a>
+      <a href="#prompts">prompts</a>
+    </nav>
+
+    <div class="header-status">
+      <span class="status-dot"></span>
+      little time capsule
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-note">
+      <span>♡ A LITTLE MESSAGE FROM TODAY</span>
+    </div>
+
+    <h1>
+      Write a letter<br>
+      <em>to your future self.</em>
+    </h1>
+
+    <p>
+      Write. Pick a date. Seal it away.
+      <br>
+      One day, you'll meet these words again.
+    </p>
+
+    <div class="hero-decoration">
+      <span>✦</span>
+      <div></div>
+      <span>♡</span>
+      <div></div>
+      <span>✦</span>
+    </div>
+
+  </section>
+
+
+  <!-- MAIN APP -->
+  <main class="app">
+
+
+    <!-- LEFT COLUMN -->
+    <section class="writing-area" id="write">
+
+      <div class="section-label">
+        <span>01</span>
+        WRITE YOUR LETTER
+      </div>
+
+
+      <!-- LETTER PAPER -->
+      <div class="letter-paper">
+
+        <div class="paper-tape tape-left"></div>
+        <div class="paper-tape tape-right"></div>
+
+
+        <div class="paper-top">
+
+          <span>DEAR, FUTURE ME</span>
+
+          <span id="todayDisplay">
+            29 / 09 / 2026
+          </span>
+
+        </div>
+
+
+        <div class="letter-heading">
+
+          <div class="tiny-heart">♡</div>
+
+          <input
+            id="letterTitle"
+            type="text"
+            placeholder="a little title..."
+            maxlength="45"
+          >
+
+        </div>
+
+
+        <textarea
+          id="letterText"
+          placeholder="Dear future me...
+
+What do you want to tell yourself?
+
+Write about today.
+Write about your dreams.
+Write about what you're scared of.
+Write about what you're hoping for.
+
+There is no right way to write this letter..."
+        ></textarea>
+
+
+        <div class="signature">
+
+          <span>with love,</span>
+
+          <input
+            id="signature"
+            type="text"
+            placeholder="your name ♡"
+            maxlength="25"
+          >
+
+        </div>
+
+
+        <div class="paper-footer">
+
+          <span id="wordCount">0 words</span>
+
+          <span>✦ written today ✦</span>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROMPT -->
+      <div class="prompt-card" id="prompts">
+
+        <div class="prompt-icon">✎</div>
+
+        <div class="prompt-content">
+
+          <span>NEED A LITTLE HELP?</span>
+
+          <p id="promptText">
+            What do you hope has changed by the time you read this?
+          </p>
+
+          <button id="newPrompt">
+            give me another prompt ↻
+          </button>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+    <!-- RIGHT COLUMN -->
+    <aside class="sidebar">
+
+
+      <!-- DATE CARD -->
+      <section class="side-card date-card">
+
+        <div class="card-label">
+          <span>02</span>
+          CHOOSE A DATE
+        </div>
+
+        <h2>
+          When should<br>
+          future you <em>read this?</em>
+        </h2>
+
+        <p>
+          Pick a day when you want this
+          little piece of today to return.
+        </p>
+
+
+        <div class="date-input-wrap">
+
+          <label for="openDate">
+            OPEN ON
+          </label>
+
+          <input
+            type="date"
+            id="openDate"
+          >
+
+        </div>
+
+
+        <div class="quick-dates">
+
+          <button data-days="30">
+            + 1 month
+          </button>
+
+          <button data-days="180">
+            + 6 months
+          </button>
+
+          <button data-days="365">
+            + 1 year
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- THEME CARD -->
+      <section class="side-card">
+
+        <div class="card-label">
+          <span>03</span>
+          PAPER STYLE
+        </div>
+
+        <div class="paper-options">
+
+          <button
+            class="paper-option active"
+            data-paper="pink"
+          >
+            <span class="paper-preview pink-preview"></span>
+            <small>pink</small>
+          </button>
+
+          <button
+            class="paper-option"
+            data-paper="cream"
+          >
+            <span class="paper-preview cream-preview"></span>
+            <small>cream</small>
+          </button>
+
+          <button
+            class="paper-option"
+            data-paper="night"
+          >
+            <span class="paper-preview night-preview"></span>
+            <small>midnight</small>
+          </button>
+
+          <button
+            class="paper-option"
+            data-paper="lavender"
+          >
+            <span class="paper-preview lavender-preview"></span>
+            <small>lavender</small>
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- SEAL CARD -->
+      <section class="seal-card">
+
+        <div class="seal-decoration">
+          ✦
+        </div>
+
+        <span>READY?</span>
+
+        <h3>
+          Seal your<br>
+          little letter.
+        </h3>
+
+        <p>
+          Once sealed, your letter will
+          wait until its opening date.
+        </p>
+
+        <button id="sealButton">
+          <span>🔒</span>
+          SEAL LETTER
+        </button>
+
+      </section>
+
+
+      <!-- COUNTDOWN -->
+      <section
+        class="countdown-card hidden"
+        id="countdownCard"
+      >
+
+        <span class="countdown-label">
+          YOUR LETTER IS SEALED
+        </span>
+
+        <div class="envelope-icon">
+          💌
+        </div>
+
+        <h3 id="countdownTitle">
+          Until future you...
+        </h3>
+
+        <div class="countdown">
+
+          <div>
+            <strong id="days">000</strong>
+            <span>DAYS</span>
+          </div>
+
+          <div>
+            <strong id="hours">00</strong>
+            <span>HOURS</span>
+          </div>
+
+          <div>
+            <strong id="minutes">00</strong>
+            <span>MIN</span>
+          </div>
+
+          <div>
+            <strong id="seconds">00</strong>
+            <span>SEC</span>
+          </div>
+
+        </div>
+
+        <p id="openDateMessage">
+          Your letter will open soon.
+        </p>
+
+      </section>
+
+
+    </aside>
+
+  </main>
+
+
+  <!-- LETTER ARCHIVE -->
+  <section class="archive" id="letters">
+
+    <div class="archive-header">
+
+      <div>
+        <span class="section-label">
+          04 / YOUR TIME CAPSULE
+        </span>
+
+        <h2>
+          My <em>letters</em>
+        </h2>
+      </div>
+
+      <div class="archive-count">
+        <strong id="letterCount">0</strong>
+        <span>SEALED</span>
+      </div>
+
+    </div>
+
+
+    <div
+      id="letterList"
+      class="letter-list"
+    >
+
+      <div class="empty-state">
+
+        <div>♡</div>
+
+        <h3>
+          Nothing here yet.
+        </h3>
+
+        <p>
+          Your future self is waiting
+          for the first letter.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OPEN LETTER MODAL -->
+  <div
+    class="modal hidden"
+    id="letterModal"
+  >
+
+    <div class="modal-overlay"></div>
+
+    <div class="open-letter">
+
+      <button
+        class="close-modal"
+        id="closeModal"
+      >
+        ×
+      </button>
+
+
+      <div
+        id="lockedLetter"
+        class="locked-letter"
+      >
+
+        <div class="big-envelope">
+          💌
+        </div>
+
+        <span>THIS LETTER BELONGS TO FUTURE YOU</span>
+
+        <h2>
+          Not yet, little one.
+        </h2>
+
+        <p>
+          This letter is still sealed.
+          <br>
+          Time hasn't reached it yet.
+        </p>
+
+      </div>
+
+
+      <div
+        id="openedLetter"
+        class="opened-letter hidden"
+      >
+
+        <span class="opened-label">
+          ✦ A MESSAGE FROM YOUR PAST SELF ✦
+        </span>
+
+        <h2 id="openedTitle">
+          A little letter
+        </h2>
+
+        <div
+          id="openedText"
+          class="opened-text"
+        ></div>
+
+        <div class="opened-signature">
+          <span>with love,</span>
+          <strong id="openedSignature"></strong>
+        </div>
+
+        <div class="opened-date">
+          Written on <span id="writtenDate"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      dear, future me ♡
+    </div>
+
+    <div>
+      write · seal · remember
+    </div>
+
+    <div>
+      © 2026
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
