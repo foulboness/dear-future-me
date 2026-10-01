@@ -1,4 +1,4 @@
-# 💌 Dear Future Me
+# Dear Future Me
 
 > *Write a letter. Pick a date. Send it to your future self.*
 
